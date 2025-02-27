@@ -11,6 +11,5 @@ def main():
     # Write the content to the console
     for statement in print_statements:
         print(statement)
-
 if __name__ == '__main__':
     main()
