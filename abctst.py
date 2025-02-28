@@ -4,7 +4,8 @@ print_statements = [r"SUFFIX = 'new.py'", r"# This is a script that generates a 
 def main():
     # Add the first line containing the file line array, use the unicode character to work both here and in the declaration line
     print_statements.insert(2, 'print_statements = [r\042' + '\042, r\042'.join(print_statements) + '\042]')
-    f = open(__file__ + SUFFIX, 'w', unicode='utf-8')
+    
+    f = open(__file__ + SUFFIX, 'w', encoding='utf-8')
     f.write('\n'.join(print_statements))
     f.close()
     for statement in print_statements:
